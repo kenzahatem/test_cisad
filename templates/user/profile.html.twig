@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Profil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Mon Profil</h1>
+        <a href="{{ path('app_home') }}">Retour en arrière</a>
+
+        <table class="table">
+
+            <tr>
+
+                <th>Nom d'utilisateur : </th>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+                <th>Email : </th>
+                <td>{{ user.email }}</td>
+            </tr>
+
+            <tr>
+
+                    <th>Rank :</th>
+                    <td>
+                        {% if user.infos is not null %}
+                            {{ user.infos.rank }}
+                        {% else %}
+                            Aucune information sur le rang
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Victoire :</th>
+                    <td>
+                        {% if user.infos is not null %}
+                            {{ user.infos.victoire }}
+                        {% else %}
+                            Aucune information sur les victoires
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Défaite :</th>
+                    <td>
+                        {% if user.infos is not null  %}
+                            {{ user.infos.defaite }}
+                        {% else %}
+                            Aucune information sur les défaites
+                        {% endif %}
+                    </td>
+                </tr>
+        </table>
+
+    </div>
+{% endblock %}

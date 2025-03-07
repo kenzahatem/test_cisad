@@ -1,0 +1,12 @@
+démarrer le serveur : symfony server:start 
+créer la database : php bin/console doctrine:database:create
+créer une entité : php bin/console make:user, pour modifire make:entity
+lancer la migration  : php bin/console make:migration; php bin/console doctrine:migrations:migrate
+créer la gestion d'authentification : php bin/console make:security
+vérifier la présence d'une route  : php bin/console debug:router
+vérifier : SELECT * FROM public."user";
+php bin/console make:crud User
+php bin/console make:crud Infos
+
+http://127.0.0.1:8000/user => accéder au crud utilisateur
+
