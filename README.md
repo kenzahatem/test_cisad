@@ -3,7 +3,7 @@
 
 ## Versions
 
-- PHP : PHP 8.4.4 (cli)
+- PHP : PHP 8.4.4 
 - Composer : Composer version 2.8.6
 - Symfony : Symfony CLI version 5.11.0
 - PostgreSQL : 16
